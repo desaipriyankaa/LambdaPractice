@@ -8,8 +8,9 @@ namespace LambdaPractice
         static void Main(string[] args)
         {
             AddNumbers del = (a, b) => a + b;
-            
-            Console.WriteLine(del(1,2));
+            var data = new ProcessData();
+            data.Process(2, 3, del);
+            Console.WriteLine("Added");
         }
     }
 }
