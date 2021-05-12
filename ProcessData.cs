@@ -11,10 +11,5 @@ namespace LambdaPractice
             var result = del(x, y);
             Console.WriteLine(result);
         }
-        public void ProcessM(int x, int y, MultiplyNumbers del)
-        {
-            var result = del(x, y);
-            Console.WriteLine(result);
-        }
     }
 }
