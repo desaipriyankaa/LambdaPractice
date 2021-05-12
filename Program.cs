@@ -10,9 +10,14 @@ namespace LambdaPractice
             AddNumbers del = (a, b) => a + b;
             AddNumbers multdel = (a, b) => a * b;
             var data = new ProcessData();
-            data.ProcessA(2, 3, del);
-            data.ProcessA(10, 3, multdel);
+            data.Process(2, 3, del);
+            data.Process(10, 3, multdel);
             Console.WriteLine("Processed");
+
+            Action<int, int> myAction = (a, b) => Console.WriteLine(a + b);
+            Action<int, int> myMultiplyAction = (a, b) => Console.WriteLine(a * b);
+            data.ProcessAction(4, 5, myAction);
+            data.ProcessAction(4, 5, myMultiplyAction);
         }
     }
 }
