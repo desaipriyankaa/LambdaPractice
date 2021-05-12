@@ -18,6 +18,12 @@ namespace LambdaPractice
             Action<int, int> myMultiplyAction = (a, b) => Console.WriteLine(a * b);
             data.ProcessAction(4, 5, myAction);
             data.ProcessAction(4, 5, myMultiplyAction);
+
+            Func<int, int, int> funcAddDel = (a, b) => a + b;
+            Func<int, int, int> funcMultDel = (a, b) => a * b;
+            data.ProcessFunc(4, 8, funcAddDel);
+            data.ProcessFunc(4, 8, funcMultDel);
+
         }
     }
 }

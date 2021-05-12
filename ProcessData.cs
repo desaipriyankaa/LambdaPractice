@@ -18,5 +18,13 @@ namespace LambdaPractice
             action(x, y);
             Console.WriteLine("Action has been processed...");
         }
+
+        public void ProcessFunc(int x, int y, Func<int, int, int> func)
+        {
+            System.Threading.Thread.Sleep(1000);
+            var result = func(x, y);
+            Console.WriteLine(result);
+            Console.WriteLine("Function has been processed...");
+        }
     }
 }
